@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pytest
+import math
 
 from app.Calculator import ClassCalculator
 
@@ -22,3 +23,11 @@ def test_calculator_division():
 def test_calculator_potency():
       calc = ClassCalculator
       assert calc.potency(2,2) = 4
+      
+def test_calculator_squareroot():
+      calc = ClassCalculator
+      assert calc.squareroot(8,2) = 2
+      
+def test_calculator_log():
+      calc = ClassCalculator
+      assert calc.math.log(10,2) :  0.3
