@@ -26,7 +26,7 @@ def test_calculator_potency():
       
 def test_calculator_squareroot():
       calc = ClassCalculator
-      assert calc.squareroot(8,2) = 2
+      assert calc.math.sqrt(4) = 2
       
 def test_calculator_log():
       calc = ClassCalculator
