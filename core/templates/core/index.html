@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="templates/core/index.html">Textos</a>
+                <a class="navbar-brand" href={% url 'home' %}>Textos</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +57,7 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
+                        <a href={% url 'post_list' %}>Posts</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -92,52 +92,66 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
+                            Texto de Amor
                         </h2>
                         <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
+                            Podemos acreditar que tudo que a vida nos oferecerá no futuro é repetir o que fizemos ontem e hoje. Mas, se prestarmos atenção, vamos nos dar conta de que nenhum dia é igual a outro. Cada manhã traz uma benção escondida; uma benção que só serve para esse dia e que não se pode guardar nem desaproveitar. Se não usamos este milagre hoje, ele vai se perder. Este milagre está nos detalhes do cotidiano; é preciso viver cada minuto porque ali encontramos a saída de nossas confusões, a alegria de nossos bons momentos, a pista correta para a decisão que tomaremos. Nunca podemos deixar que cada dia pareça igual ao anterior porque todos os dias são diferentes, porque estamos em constante processo de mudança.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Postado por <a href="#">Paulo Coelho</a> em 24 de Setembro de 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                            Amizade
                         </h2>
+                        <h3 class="post-subtitle">
+                            A amizade consegue ser tão complexa... 
+							Deixa uns desanimados, outros bem felizes... 
+							É a alimentação dos fracos 
+							É o reino dos fortes 
+
+							Faz-nos cometer erros 
+							Os fracos deixam se ir abaixo 
+							Os fortes erguem sempre a cabeça 
+							os assim assim assumem-os 
+
+							Sem pensar conquistamos 
+							O mundo geral 
+							e construímos o nosso pequeno lugar 
+							deixando brilhar cada estrelinha 
+
+							Estrelinhas... 
+							Doces, sensíveis, frias, ternurentas... 
+							Mas sempre presentes em qualquer parte 
+							Os donos da Amizade...
+                        </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                    <p class="post-meta">Postado por <a href="#">Desconhecido</a> em 24 de Dezembro de 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Science has not yet mastered prophecy
+                            Os Viajantes e o Urso
                         </h2>
                         <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
+                            Um dia dois viajantes dera de cara com um urso. O primeiro se salvou escalando uma árvore, mas o outro, sabendo que não ia consguir vencer sozinho o urso, se jogou no chão e fingui-se de morto. O urso se aproximou dele e começou a cheirar sua orelha, mas, convencido de que estava morto, foi embora. O amigo começou a descer da árvore e perguntou:
+							<p>- O que o urso estava cochichando em seu ouvido?</p>
+							<p>- Ora, ele só me disse para pensar duas vezes antes de sair por aí viajando com gente que abandona os amigos na hora do perigo.</p>
+
+							Moral da história:
+							A desgraça põe à prova a sincaridade e a amizade
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                    <p class="post-meta">Postado por <a href="#">Esopo</a> em 02 de Julho de 2016</p>
                 </div>
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="#">Posts Anteriores &rarr;</a>
                     </li>
                 </ul>
             </div>
@@ -177,7 +191,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="copyright text-muted">Copyright &copy; DAS 1-2016</p>
                 </div>
             </div>
         </div>
