@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+import logging
+logr = logging.getLogger(__name__)
 
 SEXO = (
 		(u'masculino', u'Masculino'),
@@ -23,3 +29,11 @@ class Pessoa(models.Model):
 	    verbose_name = 'Pessoa'
 	    verbose_name_plural = 'Pessoas'
 	    ordering = ['pessoa_nome']
+
+User.profile = property(lambda u: Pessoa.objects.get_or_create(pessoa_id=u)[0])
+
+@receiver(post_save, sender=User)
+def user_added(sender, **kwargs):
+	if kwargs.get('created', False):
+		up = Pessoa.objects.create(pessoa_id=kwargs.get('instance'))
+		logr.debug("Pessoa criada: %s" % up)
