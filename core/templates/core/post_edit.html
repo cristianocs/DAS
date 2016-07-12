@@ -95,79 +95,11 @@
 
     <!-- Main Content -->
     <a href="{% url 'post.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Texto de Amor
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Podemos acreditar que tudo que a vida nos oferecerá no futuro é repetir o que fizemos ontem e hoje. Mas, se prestarmos atenção, vamos nos dar conta de que nenhum dia é igual a outro. Cada manhã traz uma benção escondida; uma benção que só serve para esse dia e que não se pode guardar nem desaproveitar. Se não usamos este milagre hoje, ele vai se perder. Este milagre está nos detalhes do cotidiano; é preciso viver cada minuto porque ali encontramos a saída de nossas confusões, a alegria de nossos bons momentos, a pista correta para a decisão que tomaremos. Nunca podemos deixar que cada dia pareça igual ao anterior porque todos os dias são diferentes, porque estamos em constante processo de mudança.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Paulo Coelho</a> em 24 de Setembro de 2014</p>
-                    {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
-                    <div class="fb-like" data-href="https://www.google.com" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"> </div>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Amizade
-                        </h2>
-                        <h3 class="post-subtitle">
-                            A amizade consegue ser tão complexa... 
-							Deixa uns desanimados, outros bem felizes... 
-							É a alimentação dos fracos 
-							É o reino dos fortes 
-
-							Faz-nos cometer erros 
-							Os fracos deixam se ir abaixo 
-							Os fortes erguem sempre a cabeça 
-							os assim assim assumem-os 
-
-							Sem pensar conquistamos 
-							O mundo geral 
-							e construímos o nosso pequeno lugar 
-							deixando brilhar cada estrelinha 
-
-							Estrelinhas... 
-							Doces, sensíveis, frias, ternurentas... 
-							Mas sempre presentes em qualquer parte 
-							Os donos da Amizade...
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Desconhecido</a> em 24 de Dezembro de 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Os Viajantes e o Urso
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Um dia dois viajantes dera de cara com um urso. O primeiro se salvou escalando uma árvore, mas o outro, sabendo que não ia consguir vencer sozinho o urso, se jogou no chão e fingui-se de morto. O urso se aproximou dele e começou a cheirar sua orelha, mas, convencido de que estava morto, foi embora. O amigo começou a descer da árvore e perguntou:
-							<p>- O que o urso estava cochichando em seu ouvido?</p>
-							<p>- Ora, ele só me disse para pensar duas vezes antes de sair por aí viajando com gente que abandona os amigos na hora do perigo.</p>
-
-							Moral da história:
-							A desgraça põe à prova a sincaridade e a amizade
-                        </h3>
-                    </a>
-                    <p class="post-meta">Postado por <a href="#">Esopo</a> em 02 de Julho de 2016</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Posts Anteriores &rarr;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+      <h1>New post</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Guardar</button>
+        </form>
 
     <hr>
 

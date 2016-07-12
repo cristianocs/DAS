@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'pessoa',
     'core',
     'post',
+    'social_widgets',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'texto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
